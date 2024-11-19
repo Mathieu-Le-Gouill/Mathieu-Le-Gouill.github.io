@@ -1,0 +1,344 @@
+
+:root {
+    --title-color: #03070f;
+    --font-color: #151b23;
+    --background-color: rgb(250, 250, 250);
+    --section-color: rgb(240, 240, 240);
+    --subsection-color: rgb(230, 230, 230);
+    --border-color:#3d444db3;
+    --hover-color: #007bff;
+    --font-size: 1rem;
+    --highlight: #007bff;
+}
+
+[data-theme="dark"] {
+    --title-color: #dde5ed;
+    --font-color: #bcc4ce;
+    --background-color: #03070f;
+    --section-color: #12171d;
+    --subsection-color: #1d2229;
+    --border-color:#3d444db3;
+    --hover-color: #f1f1f1;
+    --highlight: #FFD700;
+}
+
+body {
+    color: var(--font-color);
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);;
+    gap: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 1.5rem;
+}
+
+#menu-toggle-button {
+    cursor: pointer;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+#menu{
+    background-color: var(--section-color);
+}
+
+#search-container
+{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    gap: 0.5rem;
+}
+
+#search-icon
+{
+    fill: var(--font-color);
+}
+
+#search-bar {
+    color: var(--font-color);
+    background-color: var(--background-color);
+    width: 25rem;
+    height: 1.2rem;
+    font-size: var(--font-size);
+    border: none;
+}
+
+#search-bar:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#search-bar::placeholder {
+    color: var(--font-color);
+    opacity: 1;
+}
+
+#home-title {
+    min-width: max-content;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color : var(--title-color);
+}
+
+
+
+#theme-toggle {
+    cursor: pointer;
+}
+
+#theme-toggle img {
+    width: 2rem;
+    height: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+#page-title {
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+.section-title {
+    display: flex;
+    font-size: var(--font-size);
+    font-weight: bold;
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+}
+
+.subsection-title {
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+section {
+
+    .section-content {
+        color: var(--font-color);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--border-color);
+        background-color: var(--section-color);
+    }
+
+    .subsection-content {
+        width: 100%;
+        box-sizing: border-box;
+        color: var(--font-color);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: var(--subsection-color);
+        padding: 1rem;
+    }
+    
+}
+
+#toc {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: var(--section-color);
+    align-items: flex-start;
+    border: 1px solid var(--border-color);
+}
+
+#toc > * {
+    margin: 0 0;
+}
+
+#toggle-button {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    display: flex;
+}
+
+#arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.1s ease;
+}
+
+#toc-list {
+    display: none;
+    cursor: pointer;
+    list-style: none;
+}
+
+#toc-list li {
+    padding: 0;
+}
+
+#toc-list > li {
+    padding-top: 1rem;
+}
+
+#toc-list ul {
+    margin-inline-start: 1rem;
+    padding: 0.5rem;
+    list-style: none;
+}
+
+#toc-list ul li {
+    padding: 0;
+}
+
+#toc-list a {
+    display: flex;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.2rem;
+}
+
+#toc-list a:hover {
+    color: var(--hover-color);
+}
+
+#content {
+    min-width: fit-content;
+    width: calc(100% - 50rem);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    max-width: 23rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--section-color); /* Black with opacity */
+    border: 1px solid var(--border-color);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.3s;
+    border-radius: 0 1rem 1rem 0;
+}
+
+/* Overlay content */
+.overlay-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 100%; /* Assure que le contenu prend toute la largeur de l'overlay */
+    box-sizing: border-box;
+}
+
+/* The navigation menu links */
+.overlay-content a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Assure que le lien prend toute la largeur disponible */
+    min-width:max-content;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-size: var(--font-size);
+    color: var(--font-color);
+    background-color: var(--section-color); /* Ajoute un background color */
+    transition: width 0.3s;
+    text-decoration: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay-content a:hover, .overlay-content a:focus {
+    color: var(--hover-color);
+    background-color: var(--subsection-color);
+    border-radius: 0.5rem;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 1.1rem;
+    font-size: 2rem;
+    color: var(--font-color);
+    cursor: pointer;
+    transition: width 0.3s;
+    text-decoration: none;
+    background-color: var(--subsection-color);
+    border-radius: 1rem;
+}
+
+.overlay .closebtn:hover {
+    color: var(--hover-color);
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+body.blur #content,
+body.blur header,
+body.blur footer {
+    filter:opacity(0.5);
+    transition: filter 0.3s;
+}
+
+.highlight {
+    color: var(--highlight);
+    transition: color 0.3s;
+}
