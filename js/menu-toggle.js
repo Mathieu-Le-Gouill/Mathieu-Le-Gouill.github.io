@@ -1,5 +1,5 @@
 function openMenu() {
-    document.getElementById("menu-overlay").style.width = "25rem";
+    document.getElementById("menu-overlay").style.width = "100%";
     document.body.classList.add('blur');
     document.addEventListener('click', outsideClickListener);
 }
